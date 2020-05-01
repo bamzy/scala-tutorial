@@ -62,5 +62,12 @@ object Tutorial_Basics_Day1{
     //cool way of printing arrays
     val test = for (num <- buff) yield "|"+ num + "|"
     test.foreach(print)
+
+    //A 2D array
+    var dd = Array.ofDim[Int](10,10)
+    for (i<- 0 to 9; j <- 0 to 9){
+      dd(i)(j) = j+i
+    }
+    dd.foreach { row => row foreach print; println }
   }
 }
