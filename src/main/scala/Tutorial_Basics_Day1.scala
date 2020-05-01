@@ -1,3 +1,5 @@
+import scala.collection.mutable.ArrayBuffer
+
 object Tutorial_Basics_Day1{
 
   def main(args: Array[String])
@@ -50,8 +52,15 @@ object Tutorial_Basics_Day1{
       }
       res
     }
+    //Two ways of defining arrays
     var nums = Array(1,2,3,4,5,6)
-    println("Res is " + getArrSum(nums ))
+    var nums1 = new Array[Int](100)
+    println("Res is " + getArrSum(nums1 ))
 
+    //cool operations on array
+    val buff = Array[String]("aaaaa","bbbbb","ccccc","ddddd")
+    //cool way of printing arrays
+    val test = for (num <- buff) yield "|"+ num + "|"
+    test.foreach(print)
   }
 }
