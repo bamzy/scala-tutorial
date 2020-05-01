@@ -90,5 +90,11 @@ object Tutorial_Basics_Day1{
     //Iterate Map
     for ((k,v) <- customers)
       printf("%s: %s\n",k,v)
+
+
+    //Tuples
+    var tuple  = (102, "Bamzmy", 12.0)
+    printf("%s owes us %.2f dollars\n",tuple._2,tuple._3)
+    tuple.productIterator.foreach{i=> print(i+" ")}
   }
 }
