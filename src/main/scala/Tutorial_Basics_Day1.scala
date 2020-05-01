@@ -69,5 +69,26 @@ object Tutorial_Basics_Day1{
       dd(i)(j) = j+i
     }
     dd.foreach { row => row foreach print; println }
+    print(dd.map(_.mkString(",")).mkString("\n"))
+
+    //Cool features on an array
+    println("")
+    println(nums.sum)
+    println(nums.min)
+    println(nums.max)
+
+
+    //Maps
+    val employee = Map("1" -> "Bob", "2"-> "Ali")
+    if (employee.contains("1"))
+      println("yes")
+
+    val customers = collection.mutable.Map(100 -> "A", 1001-> "B")
+    customers(170) = "C"
+    println(customers(100))
+
+    //Iterate Map
+    for ((k,v) <- customers)
+      printf("%s: %s\n",k,v)
   }
 }
